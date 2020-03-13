@@ -11,7 +11,7 @@ Gradle Kotiln DSL
 </summary>
 
 ```kotlin
-testImplementation("com.github.erikhuizinga:mockk-junit4:$:LATEST_VERSION")
+testImplementation("com.github.erikhuizinga:mockk-junit4:$LATEST_VERSION")
 ```
 
 </details>
@@ -23,7 +23,7 @@ Gradle Groovy DSL
 </summary>
 
 ```groovy
-testImplementation "com.github.erikhuizinga:mockk-junit4:$:LATEST_VERSION"
+testImplementation "com.github.erikhuizinga:mockk-junit4:$LATEST_VERSION"
 ```
 
 </details>
