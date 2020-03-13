@@ -8,7 +8,7 @@ import org.junit.rules.TestWatcher
 import org.junit.runner.Description
 
 /**
- * Unmock all MockK mocks so that mocks don't leak between unit test classes.
+ * Unmock all MockK mocks so that they don't leak between unit test classes.
  * Apply this as a [@ClassRule][ClassRule].
  * Also apply [MockkTestRule].
  */
@@ -17,7 +17,7 @@ class MockkTestClassRule : TestWatcher() {
 }
 
 /**
- * Clear all MockK mocks so that mock state doesn't leak between unit test functions.
+ * Clear all MockK mocks so that their state doesn't leak between unit test functions.
  * Apply this as a [@Rule][Rule].
  * Also apply [MockkTestClassRule].
  */
