@@ -7,7 +7,7 @@ MockK Patterns for JUnit 4
 <details open>
 
 <summary>
-Gradle Kotiln DSL
+Gradle Kotlin DSL
 </summary>
 
 ```kotlin
