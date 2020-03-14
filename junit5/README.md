@@ -36,7 +36,7 @@ See the JUnit 5 user guide to learn more about [registering extension](https://j
 
 #### `MockkExtension`
 
-Apply this `Extension` to automatically apply `MockkClearExtension` and `MockkUnmockExtension].
+Apply this `Extension` to automatically apply `MockkClearExtension` and `MockkUnmockExtension`.
 These extensions clear all MockK mocks after every unit test and unmock all MockK mocks after the test class.
 
 #### `MockkClearExtension`
