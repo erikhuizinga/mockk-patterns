@@ -7,6 +7,7 @@ import org.junit.Rule
  * Extend this class to automatically apply [MockkTestClassRule] and [MockkTestRule]. These rules
  * clear all MockK mocks after every unit test and unmock all MockK mocks after the test class.
  */
+@Suppress("unused")
 abstract class MockkTest {
     companion object {
         // Unfortunately @JvmStatic is required, so this must be a class and cannot be an interface
