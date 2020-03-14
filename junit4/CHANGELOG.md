@@ -8,24 +8,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- README.md
-
-### `mockk-junit4`
-
-#### Added
-
 - CHANGELOG.md
 - README.md
 
-#### Changed
+### Changed
 
 - Improved documentation
 
 ## [1.0.0-alpha] - 2020-03-12
 
-### `mockk-junit4`
-
-#### Added
+### Added
 
 - 🎉 Initial alpha release
 - JUnit 4 module
