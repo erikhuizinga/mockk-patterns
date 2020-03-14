@@ -43,5 +43,5 @@ Class rule to unmock all MockK mocks so that they don't leak between unit test c
 
 #### `MockkTestRule`
 
-Rul to clear all MockK mocks so that their state doesn't leak between unit test functions.
+Rule to clear all MockK mocks so that their state doesn't leak between unit test functions.
 
