@@ -40,10 +40,8 @@ These rules clear all MockK mocks after every unit test and unmock all MockK moc
 #### `MockkTestClassRule`
 
 Class rule to unmock all MockK mocks so that they don't leak between unit test classes.
-Also apply `MockkTestRule`.
 
 #### `MockkTestRule`
 
 Rul to clear all MockK mocks so that their state doesn't leak between unit test functions.
-Also apply `MockkTestClassRule`.
 

@@ -10,7 +10,6 @@ import org.junit.runner.Description
 /**
  * Unmock all MockK mocks so that they don't leak between unit test classes.
  * Apply this as a [@ClassRule][ClassRule].
- * Also apply [MockkTestRule].
  */
 class MockkTestClassRule : TestWatcher() {
     override fun finished(description: Description?) = unmockkAll()
@@ -19,7 +18,6 @@ class MockkTestClassRule : TestWatcher() {
 /**
  * Clear all MockK mocks so that their state doesn't leak between unit test functions.
  * Apply this as a [@Rule][Rule].
- * Also apply [MockkTestClassRule].
  */
 class MockkTestRule : TestWatcher() {
     override fun finished(description: Description?) = clearAllMocks()
