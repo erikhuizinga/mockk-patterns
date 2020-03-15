@@ -1,9 +1,2 @@
-plugins {
-    kotlin("jvm") version KOTLIN
-}
-
-allprojects {
-    repositories {
-        mavenCentral()
-    }
-}
+plugins { kotlin("jvm") version KOTLIN }
+allprojects { repositories { mavenCentral() } }
