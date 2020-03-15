@@ -46,3 +46,7 @@ Apply this `Extension` to clear all Mockk mocks after each unit test.
 #### `MockkUnmockExtension`
 
 Apply this `Extension` to unmock all Mockk mocks after the test class.
+
+### Example
+
+Take a look at [ExampleTestSuite](src/test/kotlin/com/github/erikhuizinga/mockk/junit5/example/ExampleTestSuite.kt) for an example to use `MockkExtension` with an extensive description of the involved MockK and JUnit 5 mechanics.
