@@ -1,3 +1,5 @@
+import Versions.JUNIT5
+import Versions.MOCKK
 import com.jfrog.bintray.gradle.BintrayExtension
 
 plugins {
@@ -16,8 +18,8 @@ version = theVersion
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
-    implementation("io.mockk:mockk:1.9.3")
-    implementation("org.junit.jupiter:junit-jupiter:5.6.0")
+    implementation("io.mockk:mockk:$MOCKK")
+    implementation("org.junit.jupiter:junit-jupiter:$JUNIT5")
 }
 
 tasks {
