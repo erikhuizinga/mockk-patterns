@@ -44,8 +44,8 @@ publishing {
 
 configure<BintrayExtension> {
     dryRun = true
-    user = properties["bintrayUser"] as String
-    key = properties["bintrayKey"] as String
+    user = properties["bintrayUser"] as? String
+    key = properties["bintrayKey"] as? String
     pkg.apply {
         version.apply {
             name = theVersion
