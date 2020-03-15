@@ -8,9 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- JUnit 5 module
-  - `MockkClearExtension` to clear all MockK mocks after each unit test
-  - `MockkUnmockExtension` to unmock all MockK mocks after a test class
-  - `MockkExtension` to automatically apply `MockkClearExtension` and `MockkUnmockExtension`
+- `MockkClearExtension` to clear all MockK mocks after each unit test
+- `MockkUnmockExtension` to unmock all MockK mocks after a test class
+- `MockkExtension` to automatically apply `MockkClearExtension` and `MockkUnmockExtension`
 - CHANGELOG.md
 - README.md
