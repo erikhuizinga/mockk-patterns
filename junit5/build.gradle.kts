@@ -20,6 +20,15 @@ dependencies {
     implementation("org.junit.jupiter:junit-jupiter:5.6.0")
 }
 
+tasks {
+    compileKotlin {
+        kotlinOptions.jvmTarget = "1.8"
+    }
+    compileTestKotlin {
+        kotlinOptions.jvmTarget = "1.8"
+    }
+}
+
 tasks.test {
     useJUnitPlatform()
 }

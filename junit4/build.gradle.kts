@@ -20,6 +20,15 @@ dependencies {
     implementation("junit:junit:4.13")
 }
 
+tasks {
+    compileKotlin {
+        kotlinOptions.jvmTarget = "1.8"
+    }
+    compileTestKotlin {
+        kotlinOptions.jvmTarget = "1.8"
+    }
+}
+
 java.withSourcesJar()
 
 publishing {
