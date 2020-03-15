@@ -20,14 +20,7 @@ dependencies {
     implementation("junit:junit:$JUNIT4")
 }
 
-tasks {
-    compileKotlin {
-        kotlinOptions.jvmTarget = "1.8"
-    }
-    compileTestKotlin {
-        kotlinOptions.jvmTarget = "1.8"
-    }
-}
+apply(from = "../kotlinJvmTarget.gradle")
 
 java.withSourcesJar()
 
