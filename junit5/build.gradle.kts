@@ -7,7 +7,7 @@ plugins {
 }
 
 internal val theVersion = "1.0.0-alpha"
-internal val theArtifactId = "mockk-junit4"
+internal val theArtifactId = "mockk-junit5"
 internal val thePublication = "${theArtifactId}Publication"
 internal val theGroup = "com.github.erikhuizinga"
 
@@ -17,7 +17,7 @@ version = theVersion
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
     implementation("io.mockk:mockk:1.9.3")
-    implementation("junit:junit:4.13")
+    implementation("org.junit.jupiter:junit-jupiter:5.6.0")
 }
 
 tasks {
@@ -27,6 +27,10 @@ tasks {
     compileTestKotlin {
         kotlinOptions.jvmTarget = "1.8"
     }
+}
+
+tasks.test {
+    useJUnitPlatform()
 }
 
 java.withSourcesJar()
