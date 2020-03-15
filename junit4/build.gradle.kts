@@ -1,5 +1,3 @@
-import Versions.JUNIT4
-import Versions.MOCKK
 import com.jfrog.bintray.gradle.BintrayExtension
 
 plugins {
