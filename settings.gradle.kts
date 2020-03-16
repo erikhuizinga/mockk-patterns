@@ -1,2 +1,2 @@
 rootProject.name = "mockk-patterns"
-include("junit4", "junit5")
+include("junit4", "junit5", "kotest")
