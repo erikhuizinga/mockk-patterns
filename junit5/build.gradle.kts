@@ -41,6 +41,7 @@ publishing {
 
 configure<BintrayExtension> {
     dryRun = true
+    publish = true
     user = properties["bintrayUser"] as? String
     key = properties["bintrayKey"] as? String
     pkg.apply {
