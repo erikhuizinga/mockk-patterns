@@ -20,8 +20,6 @@ dependencies {
     implementation("junit:junit:$JUNIT4")
 }
 
-apply(from = "../kotlinJvmTarget.gradle")
-
 java.withSourcesJar()
 
 publishing {

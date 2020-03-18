@@ -20,8 +20,6 @@ dependencies {
     implementation("org.junit.jupiter:junit-jupiter:$JUNIT5")
 }
 
-apply(from = "../kotlinJvmTarget.gradle")
-
 tasks.test {
     useJUnitPlatform()
 }
