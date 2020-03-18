@@ -12,11 +12,3 @@ import org.junit.jupiter.api.extension.Extension
 class MockkClearUnmockExtension :
     AfterEachCallback by MockkClearExtension(),
     AfterAllCallback by MockkUnmockExtension()
-
-@Deprecated(
-    message = "Renamed to MockkClearUnmockExtension, will be removed in an upcoming release",
-    replaceWith = ReplaceWith("MockkClearUnmockExtension")
-)
-class MockkExtension :
-    AfterEachCallback by MockkClearExtension(),
-    AfterAllCallback by MockkUnmockExtension()
