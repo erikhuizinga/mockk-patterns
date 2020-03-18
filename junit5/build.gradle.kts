@@ -23,8 +23,6 @@ tasks.test {
     useJUnitPlatform()
 }
 
-java.withSourcesJar()
-
 publishing {
     publications {
         create<MavenPublication>(thePublication) {

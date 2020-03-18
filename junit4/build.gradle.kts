@@ -19,8 +19,6 @@ dependencies {
     implementation("junit:junit:$JUNIT4")
 }
 
-java.withSourcesJar()
-
 publishing {
     publications {
         create<MavenPublication>(thePublication) {

@@ -18,4 +18,6 @@ subprojects {
     tasks.withType<KotlinCompile>().configureEach {
         kotlinOptions.jvmTarget = "1.8"
     }
+
+    configure<JavaPluginExtension>() { withSourcesJar() }
 }
