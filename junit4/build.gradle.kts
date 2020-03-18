@@ -2,7 +2,7 @@ import com.jfrog.bintray.gradle.BintrayExtension
 
 plugins {
     `maven-publish`
-    id("com.jfrog.bintray") version "1.8.4"
+    id("com.jfrog.bintray") version BINTRAY
 }
 
 internal val theVersion = "1.0.0"
