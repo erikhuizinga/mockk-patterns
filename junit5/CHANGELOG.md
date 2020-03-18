@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 _No unreleased changes_
 
+## [2.0.0] - 2020-03-18
+
+### Removed
+
+- The previously deprecated `MockkExtension` has been removed.
+
 ## [1.1.0] - 2020-03-18
 
 ### Added
