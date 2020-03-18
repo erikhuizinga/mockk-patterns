@@ -8,14 +8,14 @@ import org.junit.jupiter.api.extension.Extension
 import org.junit.jupiter.api.extension.ExtensionContext
 
 /**
- * Apply this [Extension] to clear all Mockk mocks after each unit test.
+ * Apply this [Extension] to clear all MockK mocks after each unit test.
  */
 class MockkClearExtension : AfterEachCallback {
     override fun afterEach(context: ExtensionContext?) = clearAllMocks()
 }
 
 /**
- * Apply this [Extension] to unmock all Mockk mocks after the test class.
+ * Apply this [Extension] to unmock all MockK mocks after the test class.
  */
 class MockkUnmockExtension : AfterAllCallback {
     override fun afterAll(context: ExtensionContext?) = unmockkAll()
