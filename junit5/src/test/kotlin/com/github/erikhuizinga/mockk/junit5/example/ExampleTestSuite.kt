@@ -43,7 +43,7 @@ object YourObject
 class ExampleTestSuite {
     private val string = "string"
 
-    @ExtendWith(MockkClearUnmockExtension::class) // From mockk-junit5, remove this to leak mock state!
+    @ExtendWith(MockkClearUnmockExtension::class) // Remove this to leak mock state!
     @Nested
     @TestMethodOrder(MethodOrderer.Alphanumeric::class)
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
