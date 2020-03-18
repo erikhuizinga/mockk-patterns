@@ -1,7 +1,7 @@
 package com.github.erikhuizinga.mockk.junit5.example
 
-import com.github.erikhuizinga.mockk.junit5.MockkExtension
-import com.github.erikhuizinga.mockk.junit5.example.ExampleTestSuite.ExampleMockkExtensionTest
+import com.github.erikhuizinga.mockk.junit5.MockkClearUnmockExtension
+import com.github.erikhuizinga.mockk.junit5.example.ExampleTestSuite.ExampleMockkClearUnmockExtensionTest
 import com.github.erikhuizinga.mockk.junit5.example.ExampleTestSuite.YourObjectIsNoLongerMockedTest
 import io.mockk.MockKException
 import io.mockk.every
@@ -21,15 +21,15 @@ object YourObject
  * In this test class the order of nested classes and unit tests is fixed for the example's
  * purposes.
  *
- * [@ExtendWith(MockkExtension::class)][MockkExtension] ensures all MockK mock state is cleared between unit tests
- * and all mocks are unmocked between test classes.
+ * [@ExtendWith(MockkClearUnmockExtension::class)][MockkClearUnmockExtension] ensures all MockK mock
+ * state is cleared between unit tests and all mocks are unmocked between test classes.
  *
- * The first test class [ExampleMockkExtensionTest] runs.
+ * The first test class [ExampleMockkClearUnmockExtensionTest] runs.
  * First we mock [YourObject].
  * Because mocking may be expensive and/or slow, we only do this once by using
  * [TestInstance.Lifecycle.PER_CLASS] and [@BeforeAll][BeforeAll].
  *
- * Then the unit tests in `ExampleMockkExtensionTest` run.
+ * Then the unit tests in `ExampleMockkClearUnmockExtensionTest` run.
  * Test 1 mocks [YourObject.toString] and then asserts and verified this.
  * Test 2 is in the same test class, so `YourObject` is still mocked, but any mock state from test 1
  * should not leak into test 2 (i.e. the mock should be cleared); this is tested in test 2.
@@ -43,11 +43,11 @@ object YourObject
 class ExampleTestSuite {
     private val string = "string"
 
-    @ExtendWith(MockkExtension::class) // From mockk-junit5, remove this to leak mock state!
+    @ExtendWith(MockkClearUnmockExtension::class) // From mockk-junit5, remove this to leak mock state!
     @Nested
     @TestMethodOrder(MethodOrderer.Alphanumeric::class)
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-    inner class ExampleMockkExtensionTest {
+    inner class ExampleMockkClearUnmockExtensionTest {
         @BeforeAll
         fun `before all`() {
             // This mock should not leak between classes and unit tests!
