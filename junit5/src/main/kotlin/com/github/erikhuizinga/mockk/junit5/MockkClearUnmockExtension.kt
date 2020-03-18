@@ -9,6 +9,14 @@ import org.junit.jupiter.api.extension.Extension
  * These extensions clear all MockK mocks after every unit test and unmock all MockK mocks after the
  * test class.
  */
+class MockkClearUnmockExtension :
+    AfterEachCallback by MockkClearExtension(),
+    AfterAllCallback by MockkUnmockExtension()
+
+@Deprecated(
+    message = "Renamed to MockkClearUnmockExtension, will be removed in an upcoming release",
+    replaceWith = ReplaceWith("MockkClearUnmockExtension")
+)
 class MockkExtension :
     AfterEachCallback by MockkClearExtension(),
     AfterAllCallback by MockkUnmockExtension()
