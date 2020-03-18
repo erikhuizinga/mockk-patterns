@@ -6,7 +6,7 @@ plugins {
     id("com.jfrog.bintray") version BINTRAY
 }
 
-internal val theVersion = "1.0.0"
+internal val theVersion = "1.1.0"
 internal val theArtifactId = "mockk-junit5"
 internal val thePublication = "${theArtifactId}Publication"
 internal val theGroup = "com.github.erikhuizinga"
