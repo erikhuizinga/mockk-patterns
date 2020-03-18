@@ -4,6 +4,17 @@ plugins { kotlin("jvm") version KOTLIN }
 allprojects { repositories { mavenCentral() } }
 
 subprojects {
+    buildscript {
+        repositories {
+            gradlePluginPortal()
+        }
+        dependencies {
+            classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.70")
+        }
+    }
+
+    apply(plugin = "org.jetbrains.kotlin.jvm")
+
     tasks.withType<KotlinCompile>().configureEach {
         kotlinOptions.jvmTarget = "1.8"
     }
