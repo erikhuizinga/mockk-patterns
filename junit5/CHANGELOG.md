@@ -10,10 +10,13 @@ _No unreleased changes_
 
 ## [1.1.0] - 2020-03-18
 
-### Changed
+### Added
+- `MockkClearUnmockExtension` is the new name of `MockkExtension`.
 
-- `MockkExtension` has been renamed to `MockkClearUnmockExtension`.
-- `MockkExtension` has been deprecated (warning).
+### Deprecated
+- `MockkExtension` has been deprecated (warning), but still exists for forward compatibility.
+
+### Changed
 - `ExampleTestSuite` uses `MockkClearUnmockExtension`.
 
 ## [1.0.0] - 2020-03-15
