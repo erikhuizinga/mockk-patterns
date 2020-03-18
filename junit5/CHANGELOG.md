@@ -6,7 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-_No unreleased changes_
+### Changed
+
+- `MockkExtension` has been renamed to `MockkClearUnmockExtension`.
+- `MockkExtension` has been deprecated (warning).
+- `ExampleTestSuite` uses `MockkClearUnmockExtension`.
 
 ## [1.0.0] - 2020-03-15
 
