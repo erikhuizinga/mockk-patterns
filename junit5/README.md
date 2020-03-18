@@ -34,7 +34,7 @@ testImplementation "com.github.erikhuizinga:mockk-junit5:$LATEST_VERSION"
 
 See the JUnit 5 user guide to learn more about [registering extension](https://junit.org/junit5/docs/5.6.0/user-guide/#extensions-registration). 
 
-#### `MockkExtension`
+#### `MockkClearUnmockExtension`
 
 Apply this `Extension` to automatically apply `MockkClearExtension` and `MockkUnmockExtension`.
 These extensions clear all MockK mocks after every unit test and unmock all MockK mocks after the test class.
@@ -49,4 +49,4 @@ Apply this `Extension` to unmock all Mockk mocks after the test class.
 
 ### Example
 
-Take a look at [ExampleTestSuite](src/test/kotlin/com/github/erikhuizinga/mockk/junit5/example/ExampleTestSuite.kt) for an example to use `MockkExtension` with an extensive description of the involved MockK and JUnit 5 mechanics.
+Take a look at [ExampleTestSuite](src/test/kotlin/com/github/erikhuizinga/mockk/junit5/example/ExampleTestSuite.kt) for an example to use `MockkClearUnmockExtension` with an extensive description of the involved MockK and JUnit 5 mechanics.
