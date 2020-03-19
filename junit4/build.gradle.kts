@@ -14,8 +14,6 @@ group = theGroup
 version = theVersion
 
 dependencies {
-    implementation(kotlin("stdlib-jdk8"))
-    implementation("io.mockk:mockk:$MOCKK")
     implementation("junit:junit:$JUNIT4")
 }
 
