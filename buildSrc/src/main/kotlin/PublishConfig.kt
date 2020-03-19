@@ -1,3 +1,5 @@
+import com.jfrog.bintray.gradle.BintrayExtension
+import com.jfrog.bintray.gradle.BintrayPlugin
 import org.gradle.api.Project
 import org.gradle.api.plugins.JavaPlugin
 import org.gradle.api.plugins.JavaPluginExtension
@@ -19,6 +21,11 @@ fun Project.configurePublishing(
     configureMavenPublishing(
         version = version,
         groupId = groupId,
+        artifactId = artifactId,
+        publication = publication
+    )
+    configureBintrayPlugin(
+        version = version,
         artifactId = artifactId,
         publication = publication
     )
@@ -44,6 +51,34 @@ private fun Project.configureMavenPublishing(
                 this.version = version
                 from(components["java"])
             }
+        }
+    }
+}
+
+private fun Project.configureBintrayPlugin(
+    version: String,
+    artifactId: String,
+    publication: String
+) {
+    apply<BintrayPlugin>()
+    configure<BintrayExtension> {
+        configure<BintrayExtension> {
+            dryRun = true
+            publish = true
+            user = properties["bintrayUser"] as? String
+            key = properties["bintrayKey"] as? String
+            pkg.apply {
+                this.version.apply {
+                    name = version
+                    vcsTag = "${artifactId}v$version"
+                }
+                repo = "maven"
+                name = artifactId
+                userOrg = "erikhuizinga"
+                setLicenses("Apache-2.0")
+                vcsUrl = "https://github.com/erikhuizinga/mockk-patterns.git"
+            }
+            setPublications(publication)
         }
     }
 }
