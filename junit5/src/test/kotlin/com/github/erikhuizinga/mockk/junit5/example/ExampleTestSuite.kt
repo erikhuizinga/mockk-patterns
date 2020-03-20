@@ -30,7 +30,7 @@ object YourObject
  * [TestInstance.Lifecycle.PER_CLASS] and [@BeforeAll][BeforeAll].
  *
  * Then the unit tests in `ExampleMockkClearUnmockExtensionTest` run.
- * Test 1 mocks [YourObject.toString] and then asserts and verified this.
+ * Test 1 mocks [YourObject.toString] and then asserts and verifies this.
  * Test 2 is in the same test class, so `YourObject` is still mocked, but any mock state from test 1
  * should not leak into test 2 (i.e. the mock should be cleared); this is tested in test 2.
  *
