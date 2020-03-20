@@ -45,3 +45,6 @@ Class rule to unmock all MockK mocks so that they don't leak between unit test c
 
 Rule to clear all MockK mocks so that their state doesn't leak between unit test functions.
 
+### Example
+
+Take a look at [ExampleTestSuite](src/test/kotlin/com/github/erikhuizinga/mockk/junit4/example/ExampleTestSuite.kt) for an example to use `MockkTest` with an extensive description of the involved MockK and JUnit 4 mechanics.
