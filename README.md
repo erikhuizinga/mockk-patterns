@@ -1,4 +1,4 @@
-[![CI](https://github.com/erikhuizinga/mockk-patterns/workflows/CI/badge.svg)](actions?query=workflow%3ACI)
+[![CI](https://github.com/erikhuizinga/mockk-patterns/workflows/CI/badge.svg)](https://github.com/erikhuizinga/mockk-patterns/actions?query=workflow%3ACI)
 
 # MockK Patterns
 
