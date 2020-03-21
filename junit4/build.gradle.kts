@@ -11,6 +11,5 @@ tasks.test {
 
 configurePublishing(
     version = "1.0.0",
-    groupId = "com.github.erikhuizinga",
     artifactId = "mockk-junit4"
 )

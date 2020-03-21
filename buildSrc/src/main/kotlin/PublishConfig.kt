@@ -13,14 +13,12 @@ import org.gradle.kotlin.dsl.get
 
 fun Project.configurePublishing(
     version: String,
-    groupId: String,
     artifactId: String
 ) {
     configureJavaPlugin()
     val publication = "${artifactId}Publication"
     configureMavenPublishing(
         version = version,
-        groupId = groupId,
         artifactId = artifactId,
         publication = publication
     )
@@ -38,7 +36,6 @@ private fun Project.configureJavaPlugin() {
 
 private fun Project.configureMavenPublishing(
     version: String,
-    groupId: String,
     artifactId: String,
     publication: String
 ) {
@@ -46,7 +43,7 @@ private fun Project.configureMavenPublishing(
     configure<PublishingExtension> {
         publications {
             create<MavenPublication>(publication) {
-                this.groupId = groupId
+                groupId = "com.github.erikhuizinga"
                 this.artifactId = artifactId
                 this.version = version
                 from(components["java"])
