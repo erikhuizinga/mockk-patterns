@@ -1,3 +1,5 @@
+![CI](https://github.com/erikhuizinga/mockk-patterns/workflows/CI/badge.svg)
+
 # MockK Patterns
 
 Patterns for [MockK](https://mockk.io) ([GitHub](https://github.com/mockk/mockk)).
