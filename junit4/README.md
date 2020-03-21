@@ -1,3 +1,5 @@
+[![Download](https://api.bintray.com/packages/erikhuizinga/maven/mockk-junit4/images/download.svg)](https://bintray.com/erikhuizinga/maven/mockk-junit4/_latestVersion)
+
 # `mockk-junit4`
 
 MockK Patterns for JUnit 4
