@@ -32,7 +32,7 @@ testImplementation "com.github.erikhuizinga:mockk-junit5:$LATEST_VERSION"
 
 ### MockK JUnit 5 extensions
 
-See the JUnit 5 user guide to learn more about [registering extension](https://junit.org/junit5/docs/5.6.0/user-guide/#extensions-registration). 
+See the JUnit 5 user guide to learn more about [registering extensions](https://junit.org/junit5/docs/5.6.0/user-guide/#extensions-registration).
 
 #### `MockkClearUnmockExtension`
 
