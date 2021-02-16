@@ -6,29 +6,21 @@ MockK Patterns for JUnit 4
 
 ## Installation
 
-<details open>
+Artifacts are hosted on the [Maven Central repository](https://search.maven.org/artifact/com.github.erikhuizinga/mockk-junit4).
 
-<summary>
-Gradle Kotlin DSL
-</summary>
+### Gradle Installation
 
 ```kotlin
-testImplementation("com.github.erikhuizinga:mockk-junit4:$LATEST_VERSION")
+repositories {
+    mavenCentral()
+}
 ```
 
-</details>
-
-<details>
-
-<summary>
-Gradle Groovy DSL
-</summary>
-
-```groovy
-testImplementation "com.github.erikhuizinga:mockk-junit4:$LATEST_VERSION"
+```kotlin
+dependencies {
+    testImplementation("com.github.erikhuizinga:mockk-junit4:$LATEST_VERSION")
+}
 ```
-
-</details>
 
 ## Usage
 
