@@ -14,9 +14,7 @@ Artifacts are hosted on the [Maven Central repository](https://search.maven.org/
 repositories {
     mavenCentral()
 }
-```
 
-```kotlin
 dependencies {
     testImplementation("com.github.erikhuizinga:mockk-junit4:$LATEST_VERSION")
 }
