@@ -1,0 +1,80 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'signing'
+
+def theArtifactID = ext.ARTIFACT_ID
+def theName = ext.NAME
+def theVersion = ext.VERSION
+
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
+javadocJar {
+    archiveClassifier.set('javadoc')
+    from javadoc
+}
+
+sourcesJar {
+    archiveClassifier.set('sources')
+    from sourceSets.main.allSource
+}
+
+artifacts {
+    archives sourcesJar, javadocJar
+}
+
+signing {
+    sign configurations.archives
+}
+
+group = "com.github.erikhuizinga"
+archivesBaseName = theArtifactID
+version = theVersion
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+
+            repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
+                authentication(userName: ossrhUsername, password: ossrhPassword)
+            }
+
+            snapshotRepository(url: "https://oss.sonatype.org/content/repositories/snapshots/") {
+                authentication(userName: ossrhUsername, password: ossrhPassword)
+            }
+
+            pom.project {
+                name = theName
+                artifactId theArtifactID
+                description theName
+                url 'https://github.com/erikhuizinga/mockk-patterns'
+
+                packaging 'jar'
+
+                scm {
+                    connection 'scm:git:git://github.com/erikhuizinga/mockk-patterns.git'
+                    developerConnection 'scm:git:ssh://github.com/erikhuizinga/mockk-patterns.git'
+                    url 'https://github.com/erikhuizinga/mockk-patterns/tree/master'
+                }
+
+                licenses {
+                    license {
+                        name 'The Apache License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id 'erikhuizinga'
+                        name 'Erik Huizinga'
+                        email 'huizinga.erik@gmail.com'
+                    }
+                }
+            }
+        }
+    }
+}
