@@ -1,5 +1,5 @@
 plugins { `kotlin-dsl` }
-repositories { jcenter() }
+repositories { mavenCentral() }
 
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.70")
