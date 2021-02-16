@@ -1,4 +1,4 @@
-[![Download](https://api.bintray.com/packages/erikhuizinga/maven/mockk-junit4/images/download.svg)](https://bintray.com/erikhuizinga/maven/mockk-junit4/_latestVersion)
+[![Download from Maven Central](https://img.shields.io/badge/dynamic/xml?color=brightgreen&label=Maven%20Central&prefix=com.github.erikhuizinga:mockk-junit4:&query=.%2F%2Flatest&url=https%3A%2F%2Frepo1.maven.org%2Fmaven2%2Fcom%2Fgithub%2Ferikhuizinga%2Fmockk-junit4%2Fmaven-metadata.xml)](https://search.maven.org/artifact/com.github.erikhuizinga/mockk-junit4)
 
 # `mockk-junit4`
 
@@ -6,29 +6,19 @@ MockK Patterns for JUnit 4
 
 ## Installation
 
-<details open>
+Artifacts are hosted on the [Maven Central repository](https://search.maven.org/artifact/com.github.erikhuizinga/mockk-junit4).
 
-<summary>
-Gradle Kotlin DSL
-</summary>
+### Gradle Installation
 
 ```kotlin
-testImplementation("com.github.erikhuizinga:mockk-junit4:$LATEST_VERSION")
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation("com.github.erikhuizinga:mockk-junit4:$LATEST_VERSION")
+}
 ```
-
-</details>
-
-<details>
-
-<summary>
-Gradle Groovy DSL
-</summary>
-
-```groovy
-testImplementation "com.github.erikhuizinga:mockk-junit4:$LATEST_VERSION"
-```
-
-</details>
 
 ## Usage
 

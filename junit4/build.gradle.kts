@@ -10,6 +10,7 @@ tasks.test {
 }
 
 configurePublishing(
+    name = "MockK Patterns for JUnit 4",
     version = "1.0.0",
     artifactId = "mockk-junit4"
 )
