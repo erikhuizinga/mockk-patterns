@@ -1,3 +1,12 @@
+# Deprecated / Obsolete
+
+Since https://github.com/mockk/mockk/pull/1297 was merged in the MockK repo, this repo's use has become much more limited.
+Therefore I stop development/maintenance of this project, and I made it an archive.
+
+I hope that it served its purpose for you!
+
+<details>
+<summary>Original README contents</summary>
 [![CI](https://github.com/erikhuizinga/mockk-patterns/workflows/CI/badge.svg)](https://github.com/erikhuizinga/mockk-patterns/actions?query=workflow%3ACI)
 
 # MockK Patterns
@@ -13,3 +22,4 @@ Patterns for [MockK](https://mockk.io) ([GitHub](https://github.com/mockk/mockk)
 
 For installation and usage: see the readme in the module dir.
 For changes and release notes: see the changelog in the module dir.
+</details>
